@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<div id="teste">
+    
+    <opcoes :valor="15"></opcoes>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('opcoes', {
+        props: ['valor'],
+        template:'<h1>Valor Opção: {{valor}}</h1>',
+        data(){
+            return{
+
+            }
+        },
+        methods: {
+
+        }
+    });
+
+    let vm = new Vue({
+        el:'#teste'
+    })
+</script>
+</html>

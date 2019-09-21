@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<div id="teste">
+    <!-- o código abaixo irá renderizar <h1>Título do Produto</h1> -->
+    <produtos></produtos>
+
+    <!-- declarando template inline (deve ser registrado no vue.component) -->
+    <comentarios inline-template>
+        <p @click="exibirAlerta">Comentário 1</p>
+    </comentarios>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('produtos', {
+        template:'<h1>Título do Produto</h1>'
+    });
+    //Agora o element é tratado como componente, tendo metodos e data
+    //definidos dentro de vue.component ao inves de new vue({el: ... etc})
+    Vue.component('comentarios',{
+        data(){
+            return{
+            }
+        },
+        methods:{
+            exibirAlerta(){
+                alert('Alerta!');
+            }
+        }
+    });
+
+    let vm = new Vue({
+        el:'#teste'
+    })
+</script>
+</html>

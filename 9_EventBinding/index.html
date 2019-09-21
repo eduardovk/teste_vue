@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <div id="teste">
+        <button @click="aumentarFonte">Aumentar Fonte</button>
+        <button @click="diminuirFonte">Diminuir Fonte</button>
+        <div :style="{color:'red', fontSize:fontSize + 'px'}">
+            {{texto}}
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            texto:'Testando Event Binding',
+            fontSize:10
+        },
+        methods: {
+            aumentarFonte(){
+                this.fontSize++;
+            },
+            diminuirFonte(){
+                this.fontSize--;
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <div id="teste">
+        <div :style="{color:'red', fontSize:fontSize + 'px'}">
+            {{texto}}
+        </div>
+        <div :style="objetoStyle">
+            {{texto}}
+        </div>
+        <!-- objetoStyle2 sobrescreve estilos do objetoStyle -->
+        <div :style="[objetoStyle, objetoStyle2]">
+            {{texto}}
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            texto:'Testando Inline Style Binding',
+            fontSize:30,
+            objetoStyle: {
+                color: 'blue',
+                fontSize: '20px'
+            },
+            objetoStyle2: {
+                color: 'green',
+                fontSize: '50px'
+            }
+        }
+    })
+</script>
+</html>

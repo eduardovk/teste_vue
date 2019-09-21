@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+Two Way Data Binding é utilizado para ler e escrever o valor do elemento (v-model="")<br>
+
+    <div id="teste">
+        <input v-model="texto" type="text" placeholder="Digite algo"><br>
+        Digitado: <span>{{texto}}</span>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            texto:''
+        }
+    })
+</script>
+</html>

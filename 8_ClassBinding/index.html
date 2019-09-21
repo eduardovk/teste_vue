@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <style>
+        .titulo{
+            font-size: 50px;
+        }
+
+        .active{
+            color:green;
+        }
+        .notActive{
+            color:red;
+        }
+    </style>
+
+
+    Criada condicao se isActive for true, utiliza classe active, senao utiliza classe notActive
+    <div id="teste">
+        <h2 class="titulo" :class="{active: isActive, notActive: !isActive}">{{texto}}</h2>
+        <!-- Mesmo resultado -->
+        <h2 class="titulo" :class="[isActive ? 'active' : 'notActive']">{{texto}}</h2>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            texto:'Testando Class Binding',
+            isActive: false
+        }
+    })
+</script>
+</html>

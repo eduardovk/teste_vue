@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <div id="teste">
+        <ul>
+            <li v-for="produto in produtos" :key="produto.id">{{produto.title}}</li>
+        </ul>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            produtos: [
+            {id: 1, title: 'Produto 1', body: 'Produto Fictício 1'},
+            {id: 2, title: 'Produto 2', body: 'Produto Fictício 2'},
+            {id: 3, title: 'Produto 3', body: 'Produto Fictício 3'},
+            {id: 4, title: 'Produto 4', body: 'Produto Fictício 4'}
+            ]
+        }
+    })
+</script>
+</html>

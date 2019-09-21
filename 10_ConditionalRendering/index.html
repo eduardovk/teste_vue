@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <div id="teste">
+        Senha: 12345 <br>
+        <input v-model="senha" type="text" placeholder="Senha">
+
+        <h1 v-if="senha ===''">
+            Digite a senha!
+        </h1>
+        <h1 v-else-if="senha == '12345'">Senha Correta!</h1>
+        <h1 v-else>Senha incorreta!</h1>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            senha: ''
+        }
+    })
+</script>
+</html>

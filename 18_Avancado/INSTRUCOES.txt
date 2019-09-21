@@ -1,0 +1,21 @@
+1. Instalar versão recomendada de Node.js (https://nodejs.org/en/)
+
+2. No Prompt (em modo Administrador), instalar vue-cli:
+npm install -g @vue/cli
+
+3. Criar pasta para o projeto e acessa-la via prompt
+
+4. Criar projeto vue nesta pasta:
+vue init webpack NomeDoProjeto
+
+## OBS: ##
+Pode ser necessario executar 'npm install -g @vue/cli-init' para executar estes comandos
+##########
+
+5. Enter, enter, enter, enter
+
+6. Install vue-router? n
+Use ESLint? n
+Set up unit tests? n
+Setup e2e tests? n
+Should we run 'npm install' after... ? Yes, use NPM

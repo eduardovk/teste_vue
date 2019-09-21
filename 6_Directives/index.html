@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+Utilizando v-on: (ou simplesmente @) para setar funcionalidade de evento <br><br>
+
+    <div id="teste">
+        <!-- Directive v-bind -->
+        <a :href="minha_url">{{minha_url}}</a>
+        <!-- Directive v-on -->
+        <h1 v-on:click="numero++">Clique Aqui Para Acrescentar {{numero}}</h1>
+        <h1 @click="numero--">Clique Aqui Para Diminuir {{numero}}</h1>
+        <!-- Directive v-on para prevenir o submit e increment numero -->
+        <form action="index.html" @submit.prevent="numero++">
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            minha_url:'https://github.com/eduardovk/',
+            numero: 10,
+            texto:''
+        }
+    })
+</script>
+</html>

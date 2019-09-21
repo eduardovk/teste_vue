@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <h3>Utilizando watcher para executar código quando variavel 'ativo' mudar</h3>
+
+    <div id="teste">
+        <button @click="ativarDesativar" type="button">Ativar / Desativar</button>
+        <h1>Eduardo {{ativo === 'active' ? 'está ativo' : 'não está ativo'}}</h1>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            ativo: 'not active'
+        },
+        watch:{
+            ativo: function(newValue){
+                alert("Eduardo agora está: " + newValue)
+            }
+        },
+        methods:{
+            ativarDesativar(){
+                if(this.ativo === 'active'){
+                    this.ativo = 'not active';
+                }else{
+                    this.ativo = 'active';
+                }
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <div id="teste">
+        <h1>{{mensagem}}</h1>
+        <h1>{{numero + 10}}</h1>
+        <h1>{{ativo ? 'Ativo!' : 'Desativado'}}</h1>
+        <h1>{{mensagem.split('').reverse('').join('')}}</h1>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#teste',
+        data:{
+            mensagem: 'Hello World!',
+            numero: 10,
+            ativo: true
+        }
+    })
+</script>
+</html>

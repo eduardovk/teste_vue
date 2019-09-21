@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+    <div id="teste">
+        {{inverterTexto}}
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            texto: 'Exemplo de Computed Properties!'
+        },
+
+        computed: {
+            inverterTexto(){
+                return this.texto.split('').reverse('').join('');
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+Data Binding utiliza o prefixo v-bind: ou simplesmente : <br>
+Omite-se os {{}} <br>
+Ex.:
+<p>class="{{dinamic_red}}" (ERRADO)</p>
+<p>:class="dinamic_red" (CORRETO)</p>
+
+    <div id="teste">
+         <!-- Abaixo não funciona, link sera {{minha_url}}   -->
+        <!-- <a href="{{minha_url}}">{{minha_url}}</a>-->
+        <a v-bind:href="minha_url">{{minha_url}}</a> <!--Maneira correta (utilizando v-bind: ou soh : )-->
+        <!-- Abaixo não funciona, id sera {{id_dinamico}}   -->
+        <!-- <h1 id="{{id_dinamico}}">Teste Id Dinamico</h1> -->
+        <h1 :id="id_dinamico">Teste Id Dinamico</h1> <!-- Maneira correta -->
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el:'#teste',
+        data:{
+            minha_url:'https://github.com/eduardovk',
+            id_dinamico:'h1_teste'
+        }
+    })
+</script>
+</html>

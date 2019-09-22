@@ -19,3 +19,10 @@ Use ESLint? n
 Set up unit tests? n
 Setup e2e tests? n
 Should we run 'npm install' after... ? Yes, use NPM
+
+7. Acessar a pasta do projeto criado via prompt, e iniciar o server local com npm:
+npm run dev
+
+
+8. Dar build (Irá executar o que estiver dentro de "scripts" em package.json):
+npm run build
